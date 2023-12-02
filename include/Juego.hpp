@@ -3,65 +3,49 @@
 #include <windows.h>
 
 using namespace std;
+class Juego {
+private:
+    Pajaro pajaro;
+    Tuberia tuberia;
+    
+    Pajaro pajaro;
+    Tu
+int score;
 
-int PajaroPosition = 10;
-int gravity = 1;
-int score = 0;
+public:
+    Juego() : score(0) {}
 
-void DrawBird() {
-    cout << "<(o)>";
-}
+    void Iniciar() {
+        while (true) {
+            Dibujo::LimpiarPantalla();
+            pajaro.Dibujar();
+            tuberias.Dibujar();
+            Dibujo::
+       
+DibujarTexto(0, 0, "Score: " + std::to_string(score));
 
-void DrawPipes() {
-    // Código para dibujar los tubos (puedes personalizar esta parte)
-}
-
-void DrawGround() {
-    for (int i = 0; i < 30; i++) {
-        cout << "_";
-    }
-}
-
-int main() {
-    while (true) {
-        system("cls");
-        DrawBird();
-        
-        DrawP
-DrawPipes();
-        DrawGround();
-        cout << 
-        cout
-"\nScore: " << score;
-
-        if (_kbhit()) {
-            char key = _getch();
-            if (key == ' ') {
+            if (_kbhit()) {
                 
-    
-if (birdPosition > 0)
-                    birdPosition -= 
-    
-2;
+           
+char key = _getch();
+                if (key == ' ') {
+                    pajaro.Saltar();
+                }
             }
+
+            pajaro.Actualizar();
+            tuberias.
+            tuberi
+Actualizar();
+
+            // Lógica de colisiones y puntaje
+
+            Sleep(100);
         }
+    }
+};
 
-        birdPosition += gravity;
-        
-            }
+
         }
-
-        birdPosi
-
-   
-Sleep(100);
     }
-
-    
-    }
-
-    retur
-
- 
-return 0;
-}
+};
