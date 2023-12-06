@@ -5,9 +5,25 @@ class Jugador
 class Menu 
 class Pajaro
 class Tuberia 
+class Animal
+class Objeto 
+class FlappyBird
 
 Jugador o--Pajaro 
- Jugador
+Jugador o--Tuberia
+Jugador o--Menu
+Jugador o--Juego
+Jugador o--Actualizable
+Juego *--Menu
+Juego *--Actualizable
+Juego *--Pajaro
+Juego *--Tuberia 
+Pajaro--|>Animal
+Pajaro
+FlappyBird--°>Juego
+
+
+
 
 
 @enduml  
