@@ -1,3 +1,4 @@
+@startuml
 class Actualizable
 class Juego
 class Jugador
@@ -5,3 +6,8 @@ class Menu
 class Pajaro
 class Tuberia 
 
+Jugador o--Pajaro 
+ Jugador
+
+
+@enduml  
