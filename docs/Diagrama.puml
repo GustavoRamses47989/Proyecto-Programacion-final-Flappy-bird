@@ -14,13 +14,17 @@ Jugador o--Tuberia
 Jugador o--Menu
 Jugador o--Juego
 Jugador o--Actualizable
+Jugador o--Animal
+Jugador o--Objeto  
 Juego *--Menu
 Juego *--Actualizable
 Juego *--Pajaro
 Juego *--Tuberia 
 Pajaro--|>Animal
-Pajaro
-FlappyBird--°>Juego
+FlappyBird--|>Juego 
+FlappyBird o--Pajaro 
+
+
 
 
 
